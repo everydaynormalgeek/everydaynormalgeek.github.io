@@ -9,7 +9,10 @@
     "title": "Everyday Normal Geek",
     "disqus": "piotrbuda"
   },
-  "socialnetwork": {},
+  "socialnetwork": {
+    "twitter": "piotrbuda",
+    "github": "pbuda"
+  },
   "theme": {
     "name": "casper"
   }
