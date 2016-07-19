@@ -2,9 +2,12 @@
   "meta": {
     "username": "everydaynormalgeek",
     "repositoryName": "everydaynormalgeek.github.io",
-    "branch": "master"
+    "branch": "master",
+    "cname": "everydaynormalgeek.com"
   },
+  "site": {},
+  "socialnetwork": {},
   "theme": {
-    "name": "Casper"
+    "name": "casper"
   }
 }
