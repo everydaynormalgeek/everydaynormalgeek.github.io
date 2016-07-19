@@ -5,7 +5,10 @@
     "branch": "master",
     "cname": "everydaynormalgeek.com"
   },
-  "site": {},
+  "site": {
+    "title": "Everyday Normal Geek",
+    "disqus": "piotrbuda"
+  },
   "socialnetwork": {},
   "theme": {
     "name": "casper"
