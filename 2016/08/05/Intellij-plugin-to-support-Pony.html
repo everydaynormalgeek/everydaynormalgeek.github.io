@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Intellij plugin to support Pony</title>
+    <meta name="description" content="" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="http://everydaynormalgeek.com/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="//everydaynormalgeek.com/themes/casper/assets/css/screen.css?v=1470403263546" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+
+    <link rel="canonical" href="http://everydaynormalgeek.com/2016/08/05/Intellij-plugin-to-support-Pony.html" />
+    <meta name="referrer" content="origin" />
+    
+    <meta property="og:site_name" content="Everyday Normal Geek" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Intellij plugin to support Pony" />
+    <meta property="og:description" content="I&amp;#8217;m a Java/Scala developer and I am used to Intellij Idea for my work. When I started my interest in Pony, I used Sublime Text for a short while and then switched to Atom for code highlighting. But what I miss in both these tools are all" />
+    <meta property="og:url" content="http://everydaynormalgeek.com/2016/08/05/Intellij-plugin-to-support-Pony.html" />
+    <meta property="article:tag" content="Pony" />
+    <meta property="article:tag" content=" Intellij" />
+    <meta property="article:tag" content=" Plugin" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Intellij plugin to support Pony" />
+    <meta name="twitter:description" content="I&amp;#8217;m a Java/Scala developer and I am used to Intellij Idea for my work. When I started my interest in Pony, I used Sublime Text for a short while and then switched to Atom for code highlighting. But what I miss in both these tools are all" />
+    <meta name="twitter:url" content="http://everydaynormalgeek.com/2016/08/05/Intellij-plugin-to-support-Pony.html" />
+    
+    <script type="application/ld+json">
+null
+    </script>
+
+    <meta name="generator" content="HubPress" />
+    <link rel="alternate" type="application/rss+xml" title="Everyday Normal Geek" href="http://everydaynormalgeek.com/rss/" />
+</head>
+<body class="post-template tag-Pony tag-Intellij tag-Plugin nav-closed">
+
+    
+
+    <div class="site-wrapper">
+
+        
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post tag-Pony tag-Intellij tag-Plugin">
+
+        <header class="post-header">
+            <h1 class="post-title">Intellij plugin to support Pony</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2016-08-05">05 August 2016</time>  on <a href="http://everydaynormalgeek.com/tag/Pony/">Pony</a>, <a href="http://everydaynormalgeek.com/tag/Intellij/"> Intellij</a>, <a href="http://everydaynormalgeek.com/tag/Plugin/"> Plugin</a>
+            </section>
+        </header>
+
+        <section class="post-content">
+            <div class="paragraph">
+<p>I&#8217;m a Java/Scala developer and I am used to Intellij Idea for my work. When I started my interest in Pony, I used Sublime Text for a short while and then switched to Atom for code highlighting. But what I miss
+in both these tools are all the information that Intellij provides - code completion, inspection, refactoring, analysis.</p>
+</div>
+<div class="paragraph">
+<p>I decided to start my own Intellij plugin to support Pony language on that platform. There is a <a href="http://www.jetbrains.org/intellij/sdk/docs/index.html" class="bare">http://www.jetbrains.org/intellij/sdk/docs/index.html</a>	[nice tutorial] on adding new language support for Intellij so I started with the basics and hit a wall. This tutorial mentions using the GrammarKit plugin which generates a lot of boilerplate from BNF grammars. The issue I had was that the grammar file in Pony repository was Antlr v3 grammar and I spent a few days investigating how to convert one to another. After some unsuccessful attempts I had to postpone work on this little project.</p>
+</div>
+<div class="paragraph">
+<p>Today I was playing with Pony and noticed this small line in the output of <code>ponyc --help</code> - <code>--bnf Print out the Pony grammar as human readable BNF.</code> I was shocked - I don&#8217;t know when this was implemented (current Pony version is 0.1.7) but it saves the plugin development! It still wasn&#8217;t the format expected by GrammarKit plugin but it was very easy to adapt. After a few moments I had a grammar file with generated tokens and all stuff required by the parser!</p>
+</div>
+<div class="paragraph">
+<p>That&#8217;s just one small step towards the first version of the plugin. The features I&#8217;d like to have in the very first published version are: syntax highlighting, pony files support, run configuration to build the project.
+This would allow people to start developing Pony applications from within Intellij. There&#8217;s still a lot of work to do, so any help is appreciated. The project is located in <a href="https://github.com/pbuda/intellij-pony">this GitHub repository</a>. Fork away!</p>
+</div>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="http://everydaynormalgeek.com/author/pbuda/" style="background-image: url(https://avatars.githubusercontent.com/u/238847?v&#x3D;3)"><span class="hidden">Piotr Buda's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="http://everydaynormalgeek.com/author/pbuda/">Piotr Buda</a></h4>
+
+                    <p>Read <a href="http://everydaynormalgeek.com/author/pbuda/">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    <span class="author-location icon-location">Lublin, Poland</span>
+                    <span class="author-link icon-link"><a href="http://www.piotrbuda.eu">http://www.piotrbuda.eu</a></span>
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=Intellij%20plugin%20to%20support%20Pony&amp;url=http://everydaynormalgeek.com/2016/08/05/Intellij-plugin-to-support-Pony.html"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://everydaynormalgeek.com/2016/08/05/Intellij-plugin-to-support-Pony.html"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://everydaynormalgeek.com/2016/08/05/Intellij-plugin-to-support-Pony.html"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+        </footer>
+
+
+        <section class="post-comments">
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+          var disqus_shortname = 'piotrbuda'; // required: replace example with your forum shortname
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </section>
+
+
+    </article>
+
+</main>
+
+<aside class="read-next">
+</aside>
+
+
+
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="http://everydaynormalgeek.com">Everyday Normal Geek</a> &copy; 2016</section>
+            <section class="poweredby">Proudly published with <a href="http://hubpress.io">HubPress</a></section>
+        </footer>
+
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
+
+        hljs.initHighlightingOnLoad();
+      </script>
+
+    <script type="text/javascript" src="//everydaynormalgeek.com/themes/casper/assets/js/jquery.fitvids.js?v=1470403263546"></script>
+    <script type="text/javascript" src="//everydaynormalgeek.com/themes/casper/assets/js/index.js?v=1470403263546"></script>
+
+</body>
+</html>
